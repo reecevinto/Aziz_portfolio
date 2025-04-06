@@ -1,72 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Aziz | Portfolio</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-        header { background: linear-gradient(to right, #333, #555); color: white; text-align: center; padding: 2em; }
-        nav { display: flex; justify-content: center; background: #444; padding: 1em; }
-        nav a { color: white; padding: 1em; text-decoration: none; font-weight: bold; }
-        section { padding: 2em; max-width: 900px; margin: auto; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); border-radius: 8px; margin-top: 20px; }
-        footer { background: #333; color: white; text-align: center; padding: 1em; margin-top: 2em; }
-        .projects-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1em; }
-        .project-card { background: #eee; padding: 1em; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px; }
-        .contact-form button { background: #444; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abdul Aziz | Portfolio</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+    header { background: linear-gradient(to right, #333, #555); color: white; text-align: center; padding: 2em; }
+    nav { display: flex; justify-content: center; background: #444; padding: 1em; }
+    nav a { color: white; padding: 1em; text-decoration: none; font-weight: bold; }
+    section { padding: 2em; max-width: 900px; margin: auto; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); border-radius: 8px; margin-top: 20px; }
+    footer { background: #333; color: white; text-align: center; padding: 1em; margin-top: 2em; }
+    .projects-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em; }
+    .project-card, .blog-post { background: #eee; padding: 1em; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); }
+    .project-card h3, .blog-post h3 { margin-top: 0; }
+    .project-card a { text-decoration: none; color: #333; font-weight: bold; }
+    .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px; }
+    .contact-form button { background: #444; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+    .blog-list { display: flex; flex-direction: column; gap: 1em; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Abdul Aziz</h1>
-        <p>Innovative Technologist | Data Enthusiast | Problem Solver</p>
-    </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="#blog">Blog</a>
-        <a href="#testimonials">Testimonials</a>
-    </nav>
-    <section id="home">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I am Abdul Aziz, a passionate technologist specializing in data analytics, web development, and machine learning.</p>
-        <p><strong>Mission:</strong> To leverage technology in solving real-world challenges.</p>
-        <p><strong>Vision:</strong> To be a leader in data-driven decision-making.</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-list">
-            <div class="project-card">
-                <h3>Project 1</h3>
-                <p>Data analysis and visualization for sales prediction.</p>
-            </div>
-            <div class="project-card">
-                <h3>Project 2</h3>
-                <p>AI-powered chatbot for customer support automation.</p>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <section id="blog">
-        <h2>Blog</h2>
-        <p>Stay tuned for insightful articles on technology and innovation!</p>
-    </section>
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-        <p>"Abdul's work is exceptional! His attention to detail and problem-solving skills are unmatched." - Client</p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Abdul Aziz. All rights reserved.</p>
-    </footer>
+  <header>
+    <h1>Abdul Aziz</h1>
+    <p>Innovative Technologist | Data Enthusiast | Problem Solver</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#blog">Blog</a>
+    <a href="#testimonials">Testimonials</a>
+  </nav>
+
+  <section id="home">
+    <h2>About Me</h2>
+    <p>Welcome to my portfolio! I am Abdul Aziz, a passionate technologist specializing in data analytics, web development, and machine learning.</p>
+    <p><strong>Mission:</strong> To leverage technology in solving real-world challenges.</p>
+    <p><strong>Vision:</strong> To be a leader in data-driven decision-making.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-list">
+      <div class="project-card">
+        <h3>Sales Forecast Dashboard</h3>
+        <p>Interactive Power BI dashboard for forecasting retail sales using time series models.</p>
+        <a href="https://github.com/reecevinto/sales-forecast-dashboard">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>AI Chatbot Assistant</h3>
+        <p>Natural language chatbot built with Python and Rasa for automating customer support tasks.</p>
+        <a href="https://github.com/reecevinto/ai-chatbot">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>This personal portfolio site built using HTML, CSS, and JavaScript to showcase my skills.</p>
+        <a href="https://github.com/reecevinto/Aziz_portfolio">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Heart Disease Prediction</h3>
+        <p>Machine learning model to predict heart disease using logistic regression and SVM (RapidMiner).</p>
+        <a href="https://github.com/reecevinto/heart-disease-predictor">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="blog-list">
+      <div class="blog-post">
+        <h3>🔍 What Makes Data Science So Powerful?</h3>
+        <p>Explore how data science transforms raw data into meaningful insights and why every business should care.</p>
+      </div>
+      <div class="blog-post">
+        <h3>🤖 Building Smarter AI Chatbots</h3>
+        <p>From keyword matching to conversational agents — here's how modern AI chatbots are evolving.</p>
+      </div>
+      <div class="blog-post">
+        <h3>📊 Visualizing Data for Decision-Making</h3>
+        <p>A quick dive into dashboard design principles that help businesses make better decisions with data.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <p>"Abdul's work is exceptional! His attention to detail and problem-solving skills are unmatched." - Client</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Abdul Aziz. All rights reserved.</p>
+  </footer>
 </body>
 </html>
